@@ -1,1 +1,61 @@
 <link href="./css/index.css" rel="stylesheet" />
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>GitHub Notification Box Example</title>
+    <style>
+      .notification-box {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        background-color: #f1f1f1;
+        border: 1px solid #ccc;
+        padding: 10px;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="notification-box"></div>
+    <script>
+      function showNotification(message) {
+        var notificationBox = document.querySelector('.notification-box');
+        notificationBox.innerHTML = message;
+        notificationBox.style.display = 'block';
+        setTimeout(function() {
+          notificationBox.style.display = 'none';
+        }, 5000);
+      }
+
+      // Set up the webhook endpoint to receive the payload from GitHub
+      // Replace YOUR_WEBHOOK_URL with the URL of your webhook endpoint
+      var webhookUrl = 'YOUR_WEBHOOK_URL';
+      fetch(webhookUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          event: 'push',
+          repository: {
+            name: 'my-repo',
+            url: 'https://github.com/my-username/my-repo'
+          },
+          message: 'Hello from GitHub!'
+        })
+      })
+      .then(function(response) {
+        if (response.ok) {
+          showNotification('Webhook received successfully!');
+        } else {
+          showNotification('Failed to receive webhook');
+        }
+      })
+      .catch(function(error) {
+        showNotification('Error receiving webhook: ' + error.message);
+      });
+    </script>
+  </body>
+</html>
+
