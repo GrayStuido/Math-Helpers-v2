@@ -1,40 +1,14 @@
 <link href="./css/index.css" rel="stylesheet" />
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>GitHub Page Example (Sender)</title>
-  </head>
-  <body>
-    <label for="message-input">Enter your message:</label>
-    <input id="message-input" type="text">
-    <button onclick="sendWebhook()">Send Webhook</button>
-    <script>
-      function sendWebhook() {
-        // Replace YOUR_WEBHOOK_URL with the URL of your webhook endpoint
-        var webhookUrl = 'YOUR_WEBHOOK_URL';
-        var message = document.getElementById('message-input').value;
-        fetch(webhookUrl, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            event: 'button-clicked',
-            message: message
-          })
-        })
-        .then(function(response) {
-          if (response.ok) {
-            alert('Webhook sent successfully!');
-          } else {
-            alert('Failed to send webhook');
-          }
-        })
-        .catch(function(error) {
-          alert('Error sending webhook: ' + error.message);
-        });
-      }
-    </script>
-  </body>
+<head>
+	<title>GitHub Repository Navigation Bar</title>
+</head>
+<body>
+	<nav>
+		<a href="#file1" class="active">File 1</a>
+		<a href="#file2">File 2</a>
+		<a href="#file3">File 3</a>
+	</nav>
+</body>
 </html>
