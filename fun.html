@@ -1,0 +1,84 @@
+<html>
+<head>
+    <title>Games</title>
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <script src="js/toggle-button.js"></script>
+</head>
+<body>
+<script src="js/settings.js"></script>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="fun.html" class="active">Games</a>
+        <a href="google.html">Extras</a>
+        <a href="settings.html">Settings</a>
+    </nav>
+</body>
+	<h1></h1>
+	<br>
+		<h1></h1>
+	<br>
+
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <center>
+    <input style="color: white;" class="searchbar" placeholder="Search Games" />
+  </center>
+
+  <div class="game-container">
+    <div class="game-square" data-url="games/agar.html">
+      <img class="game-image" src="https://via.placeholder.com/160x240.png?text=Game1" />
+      <div class="game-name">AgarioLite</div>
+    </div>
+    <div class="game-square" data-url="games/game2.html">
+      <img class="game-image" src="https://via.placeholder.com/160x240.png?text=Game2" />
+      <div class="game-name">Game2</div>
+    </div>
+  </div>
+	
+  </div>
+
+  <div class="nogames">
+    <h1>¯\_(ツ)_/¯</h1>
+    <p>No results found. If you want to add a game, please make a suggestion to our <a class="linkiebtn" href="https://github.com/your-github-repo/issues">GitHub</a>.</p>
+  </div>
+
+
+  <script>
+    const searchbar = document.querySelector(".searchbar");
+    const games = document.querySelectorAll(".game-square");
+    const noGames = document.querySelector(".nogames");
+
+    searchbar.addEventListener("keyup", function(event) {
+      const query = event.target.value.toLowerCase();
+      let numGames = 0;
+      games.forEach(function(game) {
+        const name = game.querySelector(".game-name").textContent.toLowerCase();
+        if (name.includes(query)) {
+          game.style.display = "block";
+          numGames++;
+        } else {
+          game.style.display = "none";
+        }
+      });
+      if (numGames === 0) {
+        noGames.style.display = "block";
+      } else {
+        noGames.style.display = "none";
+      }
+    });
+	    games.forEach(function(game) {
+      const url = game.getAttribute("data-url");
+      game.addEventListener("click", function() {
+        window.location.href = url;
+      });
+    });
+  </script>
+</body>
+</html>

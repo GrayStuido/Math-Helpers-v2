@@ -1,0 +1,424 @@
+		body {
+			color: white;
+			margin: 0;
+			padding: 0;
+			background-image: linear-gradient(to bottom, #1B4755 0px, #1c1c1c 225.6px);
+			background-size: cover;
+			background-repeat: no-repeat;
+			 font-family: 'Lexend Semi-Bold', sans-serif;
+		}
+		@font-face {
+  font-family: 'Lexend Semi-Bold';
+  src: url('path/to/lexend-semibold.woff2') format('woff2'), /* Modern Browsers */
+       url('path/to/lexend-semibold.woff') format('woff'); /* Older Browsers */
+  font-weight: 600; /* Specify the font weight */
+  font-style: normal; /* Specify the font style */
+}
+
+		nav {
+			background-color: #1c1c1c;
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 50px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 5 20px;
+			box-shadow: 0 0 5px rgba(0,0,0,0.3);
+			z-index: 9999;
+		}
+
+		nav a {
+			color: white;
+			text-decoration: none;
+			margin-right: 30px;
+			font-size: 16px;
+			transition: all 0.2s ease-in-out;
+			background-color: #1c1c1c;
+		}
+
+		nav a:hover {
+			text-decoration: none;
+			color: black;
+			font-size: 16px;
+			color: #ccc;
+			background-color: #000;
+						font-weight: bold;
+
+  border: 4px solid #00AAD7;
+		}
+
+		nav a.active {
+			color: black;
+			font-weight: bold;
+			background-color: #00AAD7;
+			font-weight: bold;
+		}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid white;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 0px solid black;
+}
+a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid white;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 4px solid black;
+}
+a:hover {
+			text-decoration: none;
+			color: black;
+			font-size: 16px;
+			color: #ccc;
+			background-color: #00AAD7;
+
+  border: 4px solid black;
+		}
+toggle-button {
+  color: black;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 20px;
+  transition: all 0.2s ease-in-out;
+  border: 0px solid white;
+  padding: 2px 2px;
+  border-radius: 20px;
+  border: 0px solid black;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			position: fixed;
+}
+toggle-button:hover {
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
+  border: 0px solid black;
+  padding: 4px 4px;
+  border-radius: 20px;
+			display: flex;
+			align-items: top;
+			justify-content: space-between;
+			position: fixed;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Set container height to full viewport height */
+  font-size: 16px;
+}
+
+h1 {
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+      #random-h1 {
+        color: Lightblue;
+  font-family: Arial, sans-serif;
+  text-align: center;
+      }
+
+
+
+
+
+
+
+
+
+
+.Changelog {
+  margin: 0 auto; /* Centers the element horizontally */
+  text-align: left; /* Aligns text to the right of the screen */
+  font-family: 'Lexend Semi-Bold', sans-serif;
+  font-size: 16px;
+  text-align: left;
+  overflow: auto;
+}
+
+.Fixed,
+.Added,
+.Changed {
+  display: inline-block;
+  padding: 1px 5px;
+  border-radius: 100px;
+  font-weight: bold;
+}
+
+.Fixed {
+  background-color: orange;
+  color: #fff;
+}
+
+.Added {
+  background-color: green;
+  color: #fff;
+}
+
+.Changed {
+  background-color: blue;
+  color: #fff;
+}
+
+
+.Change {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+
+
+/* Games Css /*
+
+  
+
+
+
+  /* Styles for searchbar */
+    .searchbar {
+	color: black;
+      width: 80%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 2px solid black;
+      border-radius: 12px;
+      font-size: 19px;
+      background-color: rgb(0, 138, 175);
+    }
+
+    .game-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .game-square {
+      position: relative;
+      width: 170px;
+      height: 240px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid black;
+      border-radius: 5px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.2s;
+	  margin-top: 8px;
+	  margin-bottom: 8px;
+	  margin-left: 8px;
+	  margin-right: 8px;
+	  background-color: #1B1B55;
+    }
+
+    .game-square:hover {
+      transform: scale(1.1);
+	    transition: all 0.2s ease-in-out;
+  animation: rainbow 5s linear infinite;
+  	text-align: center;
+				font-weight: bold;
+    }
+
+    .game-name {
+      font-size: 20px;
+      text-align: center;
+      margin-top: 6px;
+	  align-items: center;
+	  
+    }
+
+
+    /* Styles for nogames section */
+    .nogames {
+      text-align: center;
+      margin-top: 50px;
+	  display: none;
+    }
+
+    .nogames h1 {
+	text-align: center;
+      font-size: 60px;
+      margin-bottom: 20px;
+    }
+	
+	
+	
+	
+	
+/* Search spinner */
+.spinner {
+  display: none;
+  border: 10px solid rgb(0, 170, 215);
+  border-top: 10px solid #000;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 0.2s linear infinite;
+  position: absolute;
+  left: 45%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+      text-align: center;
+	  align-items: center;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+	
+
+
+
+
+    .game-image {
+      position: relative;
+	  margin-top: 8px;
+	  margin-right: auto;
+      width: 90%;
+      height: 80%;
+      align-items: center;
+	  margin-left: 8px;
+	  margin-right: 8px;
+	  border: 2px solid black;
+      border-radius: 5px;
+	  object-fit: cover;
+	  display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+/* Bounce effect */
+.game-square:hover .game-image {
+  animation: bounce 0.5s ease-out;
+}
+
+    @keyframes glint {
+      0% {
+        left: -50%;
+        opacity: 0;
+      }
+      50% {
+        left: 150%;
+        opacity: 1;
+      }
+      100% {
+        left: 150%;
+        opacity: 0;
+      }
+    }
+	
+	@keyframes bounce {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(0, -10px);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+  75% {
+    transform: translate(0, -5px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+
+
+	
+	
+	
+	
+@keyframes rainbow {
+    0% {
+      border-color: rgb(255, 0, 0);
+    }
+    25% {
+      border-color: rgb(0, 255, 0);
+    }
+    50% {
+      border-color: rgb(0, 0, 255);
+    }
+    75% {
+      border-color: rgb(0, 255, 0);
+    }
+    100% {
+      border-color: rgb(255, 0, 0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Set the width and color of the scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgb(0, 170, 215);
+}
+
+/* Add a darker color on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(0, 164, 208);
+}
+
+/* Set the color of the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 170, 215);
+  border-radius: 5px;
+}
+
+/* Set the color of the scrollbar track */
+::-webkit-scrollbar-track {
+  background-color: #1c1c1c;
+}
+
+
+
+
+
+
