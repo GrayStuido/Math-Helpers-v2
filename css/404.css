@@ -1,0 +1,126 @@
+		body {
+			margin: 0;
+			padding: 0;
+			background: linear-gradient(to bottom, #1c1c1c, #1B4755);
+			background-size: cover;
+			background-repeat: no-repeat;
+			  font-family: 'Lexend Semi-Bold', sans-serif;
+		}
+
+		nav {
+			background-color: #1c1c1c;
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 50px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 5 20px;
+			box-shadow: 0 0 5px rgba(0,0,0,0.3);
+			z-index: 9999;
+		}
+
+		nav a {
+			color: white;
+			text-decoration: none;
+			margin-right: 30px;
+			font-size: 16px;
+			transition: all 0.2s ease-in-out;
+			background-color: 4F4F4F;
+			font-weight: bold;
+		}
+
+		nav a:hover {
+			color: black;
+			font-size: 16px;
+			color: #ccc;
+			background-color: #00AAD7;
+
+  border: 2px solid black;
+		}
+
+		nav a.active {
+			color: black;
+			font-weight: bold;
+			background-color: #00AAD7;
+
+		}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid white;
+  padding: 8px 12px;
+  border-radius: 20px;
+}
+toggle-button {
+  color: black;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 20px;
+  transition: all 0.2s ease-in-out;
+  border: 0px solid white;
+  padding: 2px 2px;
+  border-radius: 20px;
+  border: 0px solid black;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			position: fixed;
+}
+toggle-button:hover {
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
+  border: 0px solid black;
+  padding: 4px 4px;
+  border-radius: 20px;
+			display: flex;
+			align-items: top;
+			justify-content: space-between;
+			position: fixed;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Set container height to full viewport height */
+
+}
+
+h1 {
+  text-align: center;
+   font-size: 40px;
+   font-weight: bold;
+}
+h2 {
+  text-align: center;
+   font-size: 34px;
+   font-weight: bold;
+}
+
+img {
+  max-width: 34%;
+  height: 34%;
+}
+@font-face {
+  font-family: 'Lexend Semi-Bold';
+  src: url('path/to/lexend-semibold.woff2') format('woff2'), /* Modern Browsers */
+       url('path/to/lexend-semibold.woff') format('woff'); /* Older Browsers */
+  font-weight: 600; /* Specify the font weight */
+  font-style: normal; /* Specify the font style */
+}
+
+
